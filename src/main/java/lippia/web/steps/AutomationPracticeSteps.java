@@ -2,6 +2,7 @@ package lippia.web.steps;
 
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -43,7 +44,7 @@ public class AutomationPracticeSteps extends PageSteps {
         AutomationPracticeService.navegarWeb();
     }
 
-
+    @Before
      @When("hago click en el boton Shop")
      public void hagoClickEnElBotonShop() {
         AutomationPracticeService.clickBotonShop();

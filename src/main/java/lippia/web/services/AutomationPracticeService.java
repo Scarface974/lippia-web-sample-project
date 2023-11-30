@@ -285,10 +285,10 @@ public class AutomationPracticeService {
         Thread.sleep(2000);
     }
         public static void visualizarArrivals () throws InterruptedException {
+            
+            DriverManager.getDriverInstance().getCurrentUrl("https://practice.automationtesting.in");
 
-            WebDriver driver = new ChromeDriver();
-            driver.get("https://practice.automationtesting.in");
-            WebElement arrival = driver.findElement(By.xpath("//*[@id=\"text-22-sub_row_1-0-2-0-0\"]/div/ul/li/a[1]/img")); // Reemplaza con el selector correcto
+            DriverManager.getName(By.xpath("//*[@id=\"text-22-sub_row_1-0-2-0-0\"]/div/ul/li/a[1]/img")); // Reemplaza con el selector correcto
 
 
             Assert.assertTrue("El primer arrival no es visible.", arrival.isDisplayed());
@@ -296,7 +296,7 @@ public class AutomationPracticeService {
 
             Thread.sleep(2000);
 
-            WebElement arrival2 = driver.findElement(By.xpath("//*[@id=\"text-22-sub_row_1-0-2-1-0\"]/div/ul/li/a[1]/img"));
+            WebElement arrival2 = driver.getName(By.xpath("//*[@id=\"text-22-sub_row_1-0-2-1-0\"]/div/ul/li/a[1]/img"));
 
 
             Assert.assertTrue("El segundo slider no es visible.", arrival2.isDisplayed());
@@ -304,7 +304,7 @@ public class AutomationPracticeService {
 
             Thread.sleep(2000);
 
-            WebElement arrival3 = driver.findElement(By.xpath("//*[@id=\"text-22-sub_row_1-0-2-2-0\"]/div/ul/li/a[1]/img"));
+            WebElement arrival3 = driver.getName(By.xpath("//*[@id=\"text-22-sub_row_1-0-2-2-0\"]/div/ul/li/a[1]/img"));
 
 
             Assert.assertTrue("El tercer slider no es visible.", arrival3.isDisplayed());
